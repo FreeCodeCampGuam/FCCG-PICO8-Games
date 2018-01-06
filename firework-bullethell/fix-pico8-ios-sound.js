@@ -18,19 +18,44 @@
 
   // create overlay
   var o = document.createElement('div')
-  o.innerHTML = 'Tap screen to load game'
-  o.style.cssText = [
-    'position: fixed',
+  o.setAttribute("style",
+    ['position: fixed',
     'top: 0',
     'left: 0',
     'right: 0',
     'bottom: 0',
-    'background: rgb(128, 128, 128)',
-    'background: rgba(128, 128, 128, 0.5)',
-    'color: white',
-    'text-align: center',
-    'padding-top: 200px',
-  ].map(function(p) { return p + ';' }).join('')
+    'background: #222',
+    // 'background: rgba(128, 128, 128, 0.5)',
+    ].map(function(q) {return q + ';'}).join(""))
+
+  var po = document.createElement('div')
+  po.innerHTML = '<img src="https://freecodecampguam.github.io/FCCG-PICO8-Games/Assets/UI/play.png" style=" margin: auto; max-width: 100%;max-height: 100%;">' //freedcodecamp.github.io/FCCG-PICO8-Games/Assets/UI/play.png
+  po.setAttribute("style",
+    ['position: fixed',
+    'top: 0',
+    'left: 0', 
+    'right:0',
+    'bottom:0',
+    'background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("icon.png") no-repeat center',
+    'background-size:contain',
+    'margin: auto',
+    'display: flex',
+    'max-height: 80%',
+    'max-width: 80%',
+    ].map(function(p) {return p + ';'}).join(""))
+  // o.style.cssText = [
+  //   'position: fixed',
+  //   'top: 0',
+  //   'left: 0',
+  //   'right: 0',
+  //   'bottom: 0',
+  //   'background: rgb(128, 128, 128)',
+  //   'background: rgba(128, 128, 128, 0.5)',
+  //   'color: white',
+  //   'text-align: center',
+  //   'padding-top: 200px',
+  // ].map(function(p) { return p + ';' }).join('')
+  o.appendChild(po);
   document.body.appendChild(o)
 
   // disable scrolling
